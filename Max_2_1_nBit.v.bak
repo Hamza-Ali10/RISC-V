@@ -1,0 +1,33 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: Hamza Ali
+// 
+// Create Date: 08/07/2023 07:33:19 PM
+// Design Name: Hamza Ali
+// Module Name: Max_2_1_nBit
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module Max_2_1_nBit(
+    input [31:0] w0,
+    input [31:0] w1,
+    input  sel,
+    output reg [31:0] out
+    );
+    always@(w0,w1,sel)
+    begin
+        out = sel ? w0 : w1;
+    end
+endmodule
